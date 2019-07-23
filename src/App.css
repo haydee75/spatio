@@ -74,3 +74,8 @@
 .footer-area {
   padding: 300px 0px 0px 0px;
 }
+
+.video-wrapper {
+  width: 600px;
+  max-width: 100%;
+}

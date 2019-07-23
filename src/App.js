@@ -1,29 +1,34 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/Header";
-import HomeBannerArea from "./components/HomeBannerArea";
-import PopularCoursesArea from "./components/PopularCoursesArea";
-import VideoArea from "./components/VideoArea";
-import Galaxies from "./components/Galaxies";
-import SpaceFacts from "./components/SpaceFacts";
-import Constellations from "./components/Constellations";
-import RegistrationArea from "./components/RegistrationArea";
-import RandomPicture from "./components/RandomPicture";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import { planets as Planets } from "./components/Planets";
+import PlanetDetail from "./components/PlanetDetail";
+import { galaxies as Galaxies } from "./components/Galaxies";
+import GalaxieDetail from "./components/GalaxieDetail";
+import { constellations as Constellations } from "./components/Constellations";
+import ConstellationDetail from "./components/ConstellationDetail";
 import Footer from "./components/Footer";
+import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <HomeBannerArea />
-        <PopularCoursesArea />
-        <VideoArea />
-        <RandomPicture />
-        <Galaxies />
-        <SpaceFacts />
-        <RegistrationArea />
-        <Constellations />
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Planets" component={Planets} />
+          <Route exact path="/Planets/:id" component={PlanetDetail} />
+          <Route exact path="/Galaxies" component={Galaxies} />
+          <Route exact path="/Galaxies/:id" component={GalaxieDetail} />
+          <Route exact path="/Constellations" component={Constellations} />
+          <Route
+            exact
+            path="/Constellations/:id"
+            component={ConstellationDetail}
+          />
+        </Switch>
         <Footer />
       </div>
     );

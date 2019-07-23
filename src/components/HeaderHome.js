@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class HomeBannerArea extends Component {
+class HeaderHome extends Component {
   render() {
     return (
       <section className="home-banner-area">
@@ -24,4 +24,4 @@ class HomeBannerArea extends Component {
   }
 }
 
-export default HomeBannerArea;
+export default HeaderHome;
