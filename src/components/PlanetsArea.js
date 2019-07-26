@@ -24,11 +24,13 @@ class PlanetsArea extends Component {
               return (
                 <div className="single-popular-course" key={eachPlanet.id}>
                   <div className="thumb">
-                    <img
-                      className="f-img img-fluid mx-auto"
-                      src={eachPlanet.photo}
-                      alt={eachPlanet.name}
-                    />
+                    <Link to={`/planets/${eachPlanet.id}`}>
+                      <img
+                        className="f-img img-fluid mx-auto"
+                        src={eachPlanet.photo}
+                        alt={eachPlanet.name}
+                      />
+                    </Link>
                   </div>
                   <div className="details">
                     <Link

@@ -13,7 +13,8 @@ const PlanetDetail = props => {
   const { params } = props.match;
   const foundPlanet = getPlanet(params.id, 10);
   let funFacts = foundPlanet.fun_facts;
-  console.log(funFacts);
+  let events = foundPlanet.events;
+
   return (
     <Fragment>
       <section className="banner-area">
@@ -45,7 +46,7 @@ const PlanetDetail = props => {
                   <div className="feature-img">
                     <img
                       className="img-fluid"
-                      src={foundPlanet.photo}
+                      src={foundPlanet.banner_photo}
                       alt={foundPlanet.name}
                     />
                   </div>
@@ -61,21 +62,37 @@ const PlanetDetail = props => {
                     <div className="col-6">
                       <img
                         className="img-fluid"
-                        src={foundPlanet.photo}
+                        src={foundPlanet.post_photo1}
                         alt={foundPlanet.name}
                       />
                     </div>
                     <div className="col-6">
                       <img
                         className="img-fluid"
-                        src={foundPlanet.photo}
+                        src={foundPlanet.post_photo2}
                         alt={foundPlanet.name}
                       />
                     </div>
                   </div>
                 </div>
+                <div className="col-lg-9 col-md-9">
+                  <h3 className="mt-20 mb-20">Events</h3>
+                  <ul className="course-list">
+                    {events.map((event, index) => {
+                      return (
+                        <Fragment key={index}>
+                          <li className="justify-content-between d-flex">
+                            {event}
+                          </li>
+                          <br />
+                        </Fragment>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             </div>
+
             <div className="col-lg-4 sidebar-widgets">
               <div className="widget-wrap">
                 <div className="single-sidebar-widget post-category-widget">
@@ -88,64 +105,61 @@ const PlanetDetail = props => {
                       </div>
                     </li>
                     <li>
-                      <a href="#" className="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <p>Distance from sun</p>
                         <p>{foundPlanet.distance_from_sun}</p>
-                      </a>
+                      </span>
                     </li>
                     <li>
-                      <a href="#" className="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <p>Radius</p>
                         <p>{foundPlanet.radius}</p>
-                      </a>
+                      </span>
                     </li>
                     <li>
-                      <a href="#" className="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <p>Diameter</p>
                         <p>{foundPlanet.diameter}</p>
-                      </a>
+                      </span>
                     </li>
                     <li>
-                      <a href="#" className="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <p>Orbital Period</p>
                         <p>{foundPlanet.orbital_period}</p>
-                      </a>
+                      </span>
                     </li>
                     <li>
-                      <a href="#" className="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <p>Mass</p>
                         <p>{foundPlanet.mass}</p>
-                      </a>
+                      </span>
                     </li>
                     <li>
-                      <a href="#" className="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <p>Temperature</p>
                         <p>{foundPlanet.temperature}</p>
-                      </a>
+                      </span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="single-sidebar-widget popular-post-widget">
                   <h4 className="popular-title">Fun facts</h4>
-                  {/* <div className="popular-post-list">
-                    {foundPlanet.funFacts.map(funFact => {
+                  <div className="popular-post-list">
+                    {funFacts.map((funFact, index) => {
                       return (
-                        <div className="single-post-list d-flex flex-row align-items-center">
-                          <div className="thumb">
-                            <img
-                              className="img-fluid"
-                              src="img/blog/pp1.jpg"
-                              alt=""
-                            />
-                          </div>
+                        <div
+                          className="single-post-list d-flex flex-row align-items-center"
+                          key={index}
+                        >
+                          <div className="thumb">&#x2604;</div>
                           <div className="details">
                             <p>{funFact}</p>
                           </div>
                         </div>
                       );
                     })}
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
