@@ -40,6 +40,7 @@ class Navbar extends Component {
                     {list_planets.map((eachPlanet, index) => {
                       return (
                         <Link
+                          key={eachPlanet.id}
                           to={`/planets/${eachPlanet.id}`}
                           className="dropdown-item"
                         >
@@ -57,6 +58,7 @@ class Navbar extends Component {
                     {list_galaxies.map((eachGalaxy, index) => {
                       return (
                         <Link
+                          key={eachGalaxy.id}
                           to={`/planets/${eachGalaxy.id}`}
                           className="dropdown-item"
                         >
@@ -74,6 +76,7 @@ class Navbar extends Component {
                     {list_constellations.map((eachContellation, index) => {
                       return (
                         <Link
+                          key={eachContellation.id}
                           to={`/planets/${eachContellation.id}`}
                           className="dropdown-item"
                         >

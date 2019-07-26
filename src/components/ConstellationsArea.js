@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import list_constellations from "../list_constellations.json";
 
 class ConstellationsArea extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      datas: list_constellations
+    };
+  }
   render() {
+    const constellations = this.state.datas.slice(0, 3);
     return (
       <section className="blog-post-area section-gap padding-bottom-none">
         <div className="container-fluid">
@@ -12,18 +19,16 @@ class ConstellationsArea extends Component {
               <div className="section-title text-left">
                 <h2>Constellations</h2>
                 <p>
-                  There are 13 zodiac constellations. Twelve of these are also
-                  used as signs for the zodiac calendar and astrology. Astrology
-                  is not to be confused with astronomy. Astrology is the study
-                  of the zodiac symbols and stars and the belief that they have
+                  There are 13 zodiac constellations. Astrology is the study of
+                  the zodiac symbols and stars and the belief that they have
                   influence over human lives.
                 </p>
               </div>
             </div>
 
-            {list_constellations.map((eachConstellation, index) => {
+            {constellations.map((eachConstellation, index) => {
               return (
-                <div className="col-lg-4 col-md-6">
+                <div className="col-lg-4 col-md-6" key={eachConstellation.id}>
                   <div className="single-blog-post">
                     <img
                       className="img-fluid"
@@ -31,17 +36,16 @@ class ConstellationsArea extends Component {
                       alt={eachConstellation.name}
                     />
                     <div className="overlay" />
-                    <div className="top-text">
+                    <div className="top-text text-white">
                       <Link to={`/constellations/${eachConstellation.id}`}>
                         {eachConstellation.name}
-                      </Link>
+                      </Link>{" "}
                     </div>
                     <div className="text">
                       <div>
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Accusamus, nostrum earum minus quos provident
-                          dicta itaque?
+                          Lorem ipsum dolor sit amet consec tetur adipisicing
+                          elit, sed do.
                         </p>
                       </div>
 
@@ -49,7 +53,8 @@ class ConstellationsArea extends Component {
                         to={`/constellations/${eachConstellation.id}`}
                         className="primary-btn"
                       >
-                        {eachConstellation.name}
+                        View Details
+                        <i className="fa fa-long-arrow-right" />
                       </Link>
                     </div>
                   </div>

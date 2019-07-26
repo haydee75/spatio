@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import list_galaxies from "../list_galaxies.json";
 
 class GalaxiesArea extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      datas: list_galaxies
+    };
+  }
   render() {
+    const galaxies = this.state.datas.slice(0, 6);
     return (
       <section className="other-feature-area small-padding-top">
         <div className="container">
@@ -19,9 +26,9 @@ class GalaxiesArea extends Component {
               </div>
             </div>
 
-            {list_galaxies.map((eachGalaxie, index) => {
+            {galaxies.map((eachGalaxie, index) => {
               return (
-                <div className="col-lg-4 col-md-6">
+                <div className="col-lg-4 col-md-6" key={eachGalaxie.id}>
                   <div className="other-feature-item">
                     <img
                       className="img-fluid"

@@ -22,7 +22,7 @@ class PlanetsArea extends Component {
           <div className="owl-carousel popuar-course-carusel">
             {list_planets.map((eachPlanet, index) => {
               return (
-                <div className="single-popular-course">
+                <div className="single-popular-course" key={eachPlanet.id}>
                   <div className="thumb">
                     <img
                       className="f-img img-fluid mx-auto"

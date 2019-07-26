@@ -1,6 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Fragment } from "react";
+import HeaderPlanets from "./HeaderPlanets";
+import SectionPlanets from "./SectionPlanets";
 
 export const planets = () => {
-  return <div>Planets</div>;
+  return (
+    <Fragment>
+      <HeaderPlanets />
+      <SectionPlanets />
+    </Fragment>
+  );
 };
