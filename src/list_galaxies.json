@@ -2,6 +2,9 @@
   {
     "id": "g1",
     "photo": "img/galaxies/milky-way.jpg",
+    "banner_photo": "../img/blog/banner_milkyWay.jpg",
+    "post_photo1": "../img/blog/milkyWay_photo1.jpg",
+    "post_photo2": "../img/blog/milkyWay_photo2.jpg",
     "name": "Milky Way",
     "galaxy_type": "Spiral",
     "diameter": "100,000-180,000 light-years",
@@ -28,6 +31,9 @@
   {
     "id": "g2",
     "photo": "img/galaxies/andromeda.jpg",
+    "banner_photo": "../img/blog/banner_andromeda.jpg",
+    "post_photo1": "../img/blog/andromeda_photo1.jpg",
+    "post_photo2": "../img/blog/andromeda_photo2.jpg",
     "name": "Andromeda",
     "galaxy_type": "Barred Spiral",
     "diameter": "220,000 light-years",
@@ -50,6 +56,9 @@
   {
     "id": "g3",
     "photo": "img/galaxies/sombrero.jpg",
+    "banner_photo": "../img/blog/banner_sombrero.jpg",
+    "post_photo1": "../img/blog/sombrero_photo1.jpg",
+    "post_photo2": "../img/blog/sombrero_photo2.jpg",
     "name": "Sombrero",
     "galaxy_type": "Spiral",
     "diameter": "50,000 light-years",
@@ -70,6 +79,9 @@
   {
     "id": "g4",
     "photo": "img/galaxies/whirlpool.jpg",
+    "banner_photo": "../img/blog/banner_whirlpool.jpg",
+    "post_photo1": "../img/blog/whirlpool_photo1.jpg",
+    "post_photo2": "../img/blog/whirlpool_photo2.jpg",
     "name": "Whirlpool",
     "galaxy_type": "Spiral",
     "diameter": "60,000 light-years",
@@ -93,6 +105,9 @@
   {
     "id": "g5",
     "photo": "img/galaxies/triangulum.jpg",
+    "banner_photo": "../img/blog/banner_triangulum.jpg",
+    "post_photo1": "../img/blog/triangulum_photo1.jpg",
+    "post_photo2": "../img/blog/triangulum_photo2.jpg",
     "name": "Triangulum",
     "galaxy_type": "Spiral",
     "diameter": "60,000 light-years",
@@ -119,6 +134,9 @@
   {
     "id": "g6",
     "photo": "img/galaxies/pinwheel.jpg",
+    "banner_photo": "../img/blog/banner_pinwheel.jpg",
+    "post_photo1": "../img/blog/pinwheel_photo1.jpg",
+    "post_photo2": "../img/blog/pinwheel_photo2.jpg",
     "name": "Pinwheel",
     "galaxy_type": "Spiral",
     "diameter": "170,000 light-years",
@@ -140,6 +158,9 @@
   {
     "id": "g7",
     "photo": "img/galaxies/messier.jpg",
+    "banner_photo": "../img/blog/banner_messier.jpg",
+    "post_photo1": "../img/blog/messier_photo1.jpg",
+    "post_photo2": "../img/blog/messier_photo2.jpg",
     "name": "Messier 87",
     "galaxy_type": "Elliptical",
     "diameter": "170,000 light-years",
@@ -164,6 +185,9 @@
   {
     "id": "g8",
     "photo": "img/galaxies/antennae.jpg",
+    "banner_photo": "../img/blog/banner_antennae.jpg",
+    "post_photo1": "../img/blog/antennae_photo1.jpg",
+    "post_photo2": "../img/blog/antennae_photo2.jpg",
     "name": "Antennae",
     "galaxy_type": "Interacting Spirals Tail/Tail",
     "diameter": "350,000 light-years",

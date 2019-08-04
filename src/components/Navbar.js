@@ -59,7 +59,7 @@ class Navbar extends Component {
                       return (
                         <Link
                           key={eachGalaxy.id}
-                          to={`/planets/${eachGalaxy.id}`}
+                          to={`/galaxies/${eachGalaxy.id}`}
                           className="dropdown-item"
                         >
                           {eachGalaxy.name}

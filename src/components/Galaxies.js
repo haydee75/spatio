@@ -1,5 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
+import HeaderGalaxies from "./HeaderGalaxies";
+import SectionGalaxies from "./SectionGalaxies";
 
 export const galaxies = () => {
-  return <div>Galaxies</div>;
+  return (
+    <Fragment>
+      <HeaderGalaxies />
+      <SectionGalaxies />
+    </Fragment>
+  );
 };
