@@ -56,6 +56,17 @@ const PlanetDetail = props => {
                   <h3 className="mt-20 mb-20">{foundPlanet.name}</h3>
                   <p className="excert">{foundPlanet.history_name}</p>
                 </div>
+                <div>
+                  <iframe
+                    title={foundPlanet.name}
+                    width="560"
+                    height="315"
+                    src={foundPlanet.youtube}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
                 <div className="col-lg-12">
                   <div className="quotes">{foundPlanet.description}</div>
                   <div className="row mt-30 mb-30">

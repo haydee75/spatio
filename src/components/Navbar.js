@@ -77,7 +77,7 @@ class Navbar extends Component {
                       return (
                         <Link
                           key={eachContellation.id}
-                          to={`/planets/${eachContellation.id}`}
+                          to={`/constellations/${eachContellation.id}`}
                           className="dropdown-item"
                         >
                           {eachContellation.name}
