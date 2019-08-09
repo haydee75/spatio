@@ -37,18 +37,9 @@ class ConstellationsArea extends Component {
                     />
                     <div className="overlay" />
                     <div className="top-text text-white">
-                      <Link to={`/constellations/${eachConstellation.id}`}>
-                        {eachConstellation.name}
-                      </Link>{" "}
+                      <h3>{eachConstellation.name}</h3>
                     </div>
                     <div className="text">
-                      <div>
-                        <p>
-                          Lorem ipsum dolor sit amet consec tetur adipisicing
-                          elit, sed do.
-                        </p>
-                      </div>
-
                       <Link
                         to={`/constellations/${eachConstellation.id}`}
                         className="primary-btn"
